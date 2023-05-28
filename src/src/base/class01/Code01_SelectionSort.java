@@ -9,6 +9,7 @@ public class Code01_SelectionSort {
 		if (arr == null || arr.length < 2) {
 			return;
 		}
+
 		for (int i = 0; i < arr.length - 1; i++) {
 			int minIndex = i;
 			for (int j = i + 1; j < arr.length; j++) {
@@ -23,6 +24,10 @@ public class Code01_SelectionSort {
 		int tmp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = tmp;
+
+//		arr[i] = arr[i] ^arr[j];
+//		arr[j] = arr[i] ^arr[j];
+//		arr[i] = arr[i] ^arr[j];
 	}
 
 	// for test
@@ -57,15 +62,19 @@ public class Code01_SelectionSort {
 	// for test
 	// 数组比较
 	public static boolean isEqual(int[] arr1, int[] arr2) {
+		// 其中一个为空
 		if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
 			return false;
 		}
+		// 全部为空
 		if (arr1 == null && arr2 == null) {
 			return true;
 		}
+		// 1、2 长度不一致
 		if (arr1.length != arr2.length) {
 			return false;
 		}
+		// 只要其中一位不等、就不等
 		for (int i = 0; i < arr1.length; i++) {
 			if (arr1[i] != arr2[i]) {
 				return false;
@@ -97,6 +106,7 @@ public class Code01_SelectionSort {
 			int[] arr2 = copyArray(arr1);
 			selectionSort(arr1);
 			comparator(arr2);
+
 			if (!isEqual(arr1, arr2)) {
 				succeed = false;
 				printArray(arr1);

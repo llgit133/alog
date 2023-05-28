@@ -1,4 +1,4 @@
-package basePromote.class05;
+package src.basePromote.class05;
 
 //叉树节点间的最大距离问题
 //从二叉树的节点a出发，可以向上或者向下走，但沿途的节点只能经过一次，到达节点b时路

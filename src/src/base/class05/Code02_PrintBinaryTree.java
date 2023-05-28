@@ -1,4 +1,4 @@
-package base.class05;
+package src.base.class05;
 
 //打印树的方法
 public class Code02_PrintBinaryTree {

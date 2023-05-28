@@ -1,4 +1,4 @@
-package base.class07;
+package src.base.class07;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -20,18 +20,16 @@ public class Code04_BestArrange {
 
 	//比较器，比较两场会议的结束时间差
 	public static class ProgramComparator implements Comparator<Program> {
-
 		@Override
 		public int compare(Program o1, Program o2) {
 			return o1.end - o2.end;
 		}
-
 	}
-
 	//programs为所有会议
 	public static int bestArrange(Program[] programs, int start) {
 		//将所有会议按照会议结束时间进行排序
 		Arrays.sort(programs, new ProgramComparator());
+
 		int result = 0;
 		for (int i = 0; i < programs.length; i++) {
 			//只要开始时间<=某个会议的开始时间，就安排该会议
@@ -42,7 +40,6 @@ public class Code04_BestArrange {
 		}
 		return result;
 	}
-
 	public static void main(String[] args) {
 
 	}

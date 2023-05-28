@@ -1,4 +1,4 @@
-package base.class05;
+package src.base.class05;
 
 //找到一个节点的后继节点
 public class Code08_SuccessorNode {

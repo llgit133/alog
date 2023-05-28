@@ -25,7 +25,6 @@ public class testRandom {
         System.out.println((double) count2/(double) testTimes);
 
 
-
         // 生成范围上的随机数
         int k = 9;
         int[] counts = new int[9];
@@ -39,11 +38,7 @@ public class testRandom {
         }
 
         // 把数字出现的概率  0-1 线性 变成0-x^2 曲线
-
         double x = 0.2;
-
-
-
 
     }
 

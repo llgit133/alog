@@ -1,4 +1,4 @@
-package base.class06;
+package src.base.class06;
 
 import java.util.Collection;
 import java.util.Comparator;

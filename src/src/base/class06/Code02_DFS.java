@@ -1,5 +1,4 @@
-package base.class06;
-
+package src.base.class06;
 import java.util.HashSet;
 import java.util.Stack;
 
@@ -19,6 +18,7 @@ public class Code02_DFS {
 		stack.add(node);
 		set.add(node);
 		System.out.println(node.value);
+
 		while (!stack.isEmpty()) {
 			Node cur = stack.pop();
 			for (Node next : cur.nexts) {
@@ -27,6 +27,7 @@ public class Code02_DFS {
 					//取出来的点又一次压入栈中
 					stack.push(cur);
 					stack.push(next);
+
 					set.add(next);
 					System.out.println(next.value);
 					break;
@@ -34,5 +35,4 @@ public class Code02_DFS {
 			}
 		}
 	}
-
 }

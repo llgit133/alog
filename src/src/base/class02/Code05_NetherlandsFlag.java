@@ -9,13 +9,10 @@ public class Code05_NetherlandsFlag {
 		int less = l - 1;
 		int more = r + 1;
 		while (l < more) {
-			if (arr[l] < p) {
-				swap(arr, ++less, l++);
-			} else if (arr[l] > p) {
-				swap(arr, --more, l);
-			} else {
-				l++;
-			}
+			// ++less, l++
+			if (arr[l] < p) {swap(arr, ++less, l++);}
+			else if (arr[l] > p) {swap(arr, --more, l);}
+			else {l++;}
 		}
 		return new int[] { less + 1, more - 1 };
 	}

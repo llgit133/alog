@@ -1,4 +1,4 @@
-package base.class05;
+package src.base.class05;
 
 import java.util.LinkedList;
 import java.util.Queue;

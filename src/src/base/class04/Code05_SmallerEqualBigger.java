@@ -1,4 +1,4 @@
-package base.class04;
+package src.base.class04;
 
 //使链表根据某个数字进行分类，且相对位置不变
 public class Code05_SmallerEqualBigger {

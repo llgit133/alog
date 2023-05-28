@@ -1,4 +1,4 @@
-package intermediate.class01;
+package src.intermediate.class01;
 
 public class Problem04_MaxOneBorderSize {
 

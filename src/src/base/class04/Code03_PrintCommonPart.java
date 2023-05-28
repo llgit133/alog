@@ -53,7 +53,5 @@ public class Code03_PrintCommonPart {
 		printLinkedList(node1);
 		printLinkedList(node2);
 		printCommonPart(node1, node2);
-
 	}
-
 }

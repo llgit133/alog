@@ -1,4 +1,4 @@
-package basePromote.class01;
+package src.basePromote.class01;
 
 //岛问题
 //【题目】

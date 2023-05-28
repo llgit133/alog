@@ -12,15 +12,15 @@ public class Code04_BSExist {
 		int mid = 0;
 		while (L < R) {
 			mid = L + ((R - L) >> 1);
-			if (sortedArr[mid] == num) {
-				return true;
-			} else if (sortedArr[mid] > num) {
-				R = mid - 1;
-			} else {
-				L = mid + 1;
-			}
+			if (sortedArr[mid] == num) {return true;}
+			else if (sortedArr[mid] > num) {R = mid - 1;}
+			else {L = mid + 1;}
 		}
 		return sortedArr[L] == num;
 	}
 
+	public static void main(String[] args) {
+		int[] ints = new int[]{1,2,3,4,5,6,7,8,9};
+		System.out.println(exist(ints, 9));
+	}
 }

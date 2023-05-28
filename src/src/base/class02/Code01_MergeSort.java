@@ -9,19 +9,19 @@ public class Code01_MergeSort {
 		if (arr == null || arr.length < 2) {
 			return;
 		}
-		mergeSort(arr, 0, arr.length - 1);
+		process(arr, 0, arr.length - 1);
 	}
 
-	public static void mergeSort(int[] arr, int l, int r) {
+	public static void process(int[] arr, int l, int r) {
 		if (l == r) {
 			return;
 		}
 		//取中值
 		int mid = l + ((r - l) >> 1);
 		//递归获取l到mid的
-		mergeSort(arr, l, mid);
-		mergeSort(arr, mid + 1, r);
-		merge(arr, l, mid, r);
+		process(arr, l, mid);
+		process(arr, mid + 1, r);
+		merge(arr, l, mid, r);  // 过程
 	}
 
 	public static void merge(int[] arr, int l, int m, int r) {
@@ -36,9 +36,11 @@ public class Code01_MergeSort {
 			help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
 		}
 		//下面两段表示 (p1 <= m && p2 <= r) 这个条件中有其中一个不满足，则将满足条件方剩余未遍历完的部分全部添加到help数组里
+		// p1没越界
 		while (p1 <= m) {
 			help[i++] = arr[p1++];
 		}
+		// p2没越界
 		while (p2 <= r) {
 			help[i++] = arr[p2++];
 		}
@@ -48,6 +50,15 @@ public class Code01_MergeSort {
 			arr[l + i] = help[i];
 		}
 	}
+
+
+
+
+
+
+
+
+
 
 	// for test
 	public static void comparator(int[] arr) {

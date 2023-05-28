@@ -1,4 +1,4 @@
-package basePromote.class07;
+package src.basePromote.class07;
 
 //换钱的最少货币数
 //【题目】

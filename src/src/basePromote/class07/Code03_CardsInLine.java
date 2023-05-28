@@ -1,4 +1,4 @@
-package basePromote.class07;
+package src.basePromote.class07;
 
 public class Code03_CardsInLine {
 

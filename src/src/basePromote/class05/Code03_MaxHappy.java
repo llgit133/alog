@@ -1,4 +1,4 @@
-package basePromote.class05;
+package src.basePromote.class05;
 
 //派对的最大快乐值
 //员工信息的定义如下:

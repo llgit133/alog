@@ -1,4 +1,4 @@
-package base.class05;
+package src.base.class05;
 
 //折纸问题的折痕判断
 public class Code10_PaperFolding {

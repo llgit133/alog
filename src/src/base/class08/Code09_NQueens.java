@@ -1,4 +1,4 @@
-package base.class08;
+package src.base.class08;
 
 public class Code09_NQueens {
 

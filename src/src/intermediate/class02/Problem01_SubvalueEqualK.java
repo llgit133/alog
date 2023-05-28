@@ -1,4 +1,4 @@
-package intermediate.class02;
+package src.intermediate.class02;
 
 import java.util.ArrayList;
 import java.util.Arrays;

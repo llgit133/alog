@@ -1,4 +1,4 @@
-package base.class06;
+package src.base.class06;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -16,20 +16,22 @@ public class Code01_BFS {
 			return;
 		}
 		Queue<Node> queue = new LinkedList<>();
-		HashSet<Node> map = new HashSet<>();
+		HashSet<Node> set = new HashSet<>();   //保证不重复
+
 		//将节点添加入队列和map
 		queue.add(node);
-		map.add(node);
-		//当队列不为空时，令cur为队列推出的一个
+		set.add(node);
 
+		//当队列不为空时，令cur为队列推出的一个
 		while (!queue.isEmpty()) {
-			Node cur = queue.poll();
-			System.out.println(cur.value);
-			//遍历cur的所有后继节点
+			Node cur = queue.poll();  //队列推出的一个
+			System.out.println(cur.value);  //这是打印，日后可以改为处理
+
+			//遍历cur的所有后继节点  把后继的点全部放进去
 			for (Node next : cur.nexts) {
 				//如果map不包含后继节点，就加入map
-				if (!map.contains(next)) {
-					map.add(next);
+				if (!set.contains(next)) {
+					set.add(next);
 					queue.add(next);
 				}
 			}

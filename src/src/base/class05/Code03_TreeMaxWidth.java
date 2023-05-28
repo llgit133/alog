@@ -1,7 +1,9 @@
-package base.class05;
+package src.base.class05;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
+import java.util.Set;
 
 //求树的最大宽度
 public class Code03_TreeMaxWidth {
@@ -24,6 +26,7 @@ public class Code03_TreeMaxWidth {
 		int curWidth = 0;
 		int curLevel = 0;
 		HashMap<Node, Integer> levelMap = new HashMap<>();
+
 		levelMap.put(head, 1);
 		LinkedList<Node> queue = new LinkedList<>();
 		queue.add(head);
@@ -46,6 +49,7 @@ public class Code03_TreeMaxWidth {
 				levelMap.put(right, levelMap.get(node) + 1);
 				queue.add(right);
 			}
+
 			//当当前节点的序号大于curLevel时，令curWidth为0，curLevel设置为当前节点的序号
 			//否则curWidth++
 			if (levelMap.get(node) > curLevel) {
@@ -60,6 +64,56 @@ public class Code03_TreeMaxWidth {
 		return maxWidth;
 	}
 
+
+
+	// 每个节点对应的层数
+	public static HashMap<Node, Integer> getMaxWidth1(Node head) {
+		HashMap<Node, Integer> levelMap = new HashMap<>();
+		levelMap.put(head, 1);
+		LinkedList<Node> queue = new LinkedList<>();
+		queue.add(head);
+		//当队列不为空时
+		while (!queue.isEmpty()) {
+			//队列推出一个节点Node
+			Node node = queue.poll();
+			//左节点不为空时，放入levelMap，同时放入队列
+			if (node.left != null) {
+				levelMap.put(node.left, levelMap.get(node) + 1);
+				queue.add(node.left);
+			}
+			//右节点不为空时，放入levelMap，同时放入队列
+			if (node.right != null) {
+				levelMap.put(node.right, levelMap.get(node) + 1);
+				queue.add(node.right);
+			}
+		}
+		return levelMap;
+	}
+
+	//
+	public static HashMap<Node, Integer> getMaxWidth2(Node head) {
+		HashMap<Node, Integer> levelMap = new HashMap<>();
+		levelMap.put(head, 1);
+		LinkedList<Node> queue = new LinkedList<>();
+		queue.add(head);
+		//当队列不为空时
+		while (!queue.isEmpty()) {
+			//队列推出一个节点Node
+			Node node = queue.poll();
+			//左节点不为空时，放入levelMap，同时放入队列
+			if (node.left != null) {
+				levelMap.put(node.left, levelMap.get(node) + 1);
+				queue.add(node.left);
+			}
+			//右节点不为空时，放入levelMap，同时放入队列
+			if (node.right != null) {
+				levelMap.put(node.right, levelMap.get(node) + 1);
+				queue.add(node.right);
+			}
+		}
+		return levelMap;
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node head = new Node(1);
@@ -71,6 +125,16 @@ public class Code03_TreeMaxWidth {
 		head.left.left.right = new Node(7);
 		int width = getMaxWidth(head);
 		System.out.println(width);
+
+
+		HashMap<Node, Integer> maxWidth2 = getMaxWidth1(head);
+		int max = 0;
+		Set<Map.Entry<Node, Integer>> entries = maxWidth2.entrySet();
+		for (Map.Entry<Node, Integer> entry : entries) {
+			max = entry.getValue()>max? entry.getValue():max;
+		}
+		System.out.println("最大值：max " + max);
 	}
 
 }
+

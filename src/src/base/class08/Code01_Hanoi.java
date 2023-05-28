@@ -1,4 +1,4 @@
-package base.class08;
+package src.base.class08;
 
 //汉诺塔问题
 //

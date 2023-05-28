@@ -1,5 +1,4 @@
-package base.class05;
-
+package src.base.class05;
 import java.util.LinkedList;
 
 //判断是否是二叉排序树
@@ -23,6 +22,7 @@ public class Code04_IsBST {
 		LinkedList<Node> inOrderList = new LinkedList<>();
 		process(head, inOrderList);
 		int pre = Integer.MIN_VALUE;
+		// 判断列表是否递增
 		for (Node cur : inOrderList) {
 			if (pre >= cur.value) {
 				return false;
@@ -41,5 +41,9 @@ public class Code04_IsBST {
 		inOrderList.add(node);
 		process(node.right, inOrderList);
 	}
+
+	// 合成一个
+
+
 
 }

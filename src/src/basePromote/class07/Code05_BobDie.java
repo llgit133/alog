@@ -1,4 +1,4 @@
-package basePromote.class07;
+package src.basePromote.class07;
 
 //Bob的生存概率
 //【题目】

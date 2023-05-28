@@ -1,4 +1,4 @@
-package base.class05;
+package src.base.class05;
 
 import java.util.LinkedList;
 
@@ -20,7 +20,7 @@ public class Code05_IsCBT {
 			return true;
 		}
 		LinkedList<Node> queue = new LinkedList<>();
-		boolean leaf = false;
+		boolean leaf = false;  // 记录开关 遇到过两个孩子不双全
 		Node l = null;
 		Node r = null;
 		queue.add(head);
@@ -28,19 +28,19 @@ public class Code05_IsCBT {
 			head = queue.poll();
 			l = head.left;
 			r = head.right;
-			if ((leaf && (l != null || r != null)) || (l == null && r != null)) {
-				return false;
-			}
-			if (l != null) {
-				queue.add(l);
-			}
-			if (r != null) {
-				queue.add(r);
-			} else {
-				leaf = true;
-			}
+
+			// l == null && r != null  条件1
+			// leaf && (l != null || r != null) 条件2   遇到过两个孩子不双全 而且不是叶节点（有孩子）
+			if ((leaf && (l != null || r != null)) || (l == null && r != null)) {return false;}
+			if (l != null) {queue.add(l);}
+			if (r != null) {queue.add(r);}
+			else {leaf = true;}   // 说明不双全
 		}
 		return true;
 	}
 
+
+	public static void main(String[] args) {
+
+	}
 }

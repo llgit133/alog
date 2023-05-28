@@ -29,9 +29,11 @@ public class Code02_SmallSum {
 		int res = 0;
 		while (p1 <= m && p2 <= r) {
 			//如果左边的值比右边小，则计算若干个左边的值
-			res += arr[p1] < arr[p2] ? (r - p2 + 1) * arr[p1] : 0;
+			res += arr[p1] < arr[p2] ? (r - p2 + 1) * arr[p1] : 0; //产生小和
 			help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
 		}
+
+
 		while (p1 <= m) {
 			help[i++] = arr[p1++];
 		}

@@ -1,4 +1,4 @@
-package intermediate.class01;
+package src.intermediate.class01;
 
 import java.util.List;
 import java.util.LinkedList;

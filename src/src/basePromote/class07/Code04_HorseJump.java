@@ -1,4 +1,4 @@
-package basePromote.class07;
+package src.basePromote.class07;
 
 //象棋中马的跳法
 //【题目】

@@ -11,7 +11,7 @@ public class Code08_GetMax {
 		if (L == R) {
 			return arr[L];
 		}
-		int mid = L + ((R - L) >> 1);
+		int mid = L + ((R - L) >> 1);// 比除2快
 		int leftMax = process(arr, L, mid);
 		int rightMax = process(arr, mid + 1, R);
 		return Math.max(leftMax, rightMax);

@@ -1,16 +1,29 @@
 package basic;
 
 
-import java.util.Comparator;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.stream.Collectors;
 
 // 对薪水进行排序
 // comparable , comparator 优先级更高
 public class EmpSort {
 
     public static void main(String[] args) {
+
+
+//        ArrayList<Object> list = new ArrayList<>();
+//        for (int userid: users) {
+//            userOrders = list.stream()
+//                    .reduce(Collectors.counting())
+//                    .map()
+//                    .sorted()
+//                    .filter((order) -> {
+//                return order.userid == userid;
+//            }).collect(Collectors.toList());
+//        }
+//        Deque<Object> objects = new ArrayDeque<Object>();
+//        Deque<Object> objects1 = new LinkedList<>();
+
         // 1.comparable
         TreeMap<Emp, String> treeMap = new TreeMap<>();
         treeMap.put(new Emp(1001,"aa", 8000), "111111");

@@ -1,4 +1,4 @@
-package basePromote.class01;
+package src.basePromote.class01;
 
 import java.util.ArrayList;
 import java.util.HashMap;

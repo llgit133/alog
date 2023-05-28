@@ -1,4 +1,5 @@
-package base.class06;
+package src.base.class06;
+
 
 import java.util.Comparator;
 import java.util.HashSet;
@@ -10,20 +11,18 @@ import java.util.Set;
 public class Code05_Prim {
 
 	public static class EdgeComparator implements Comparator<Edge> {
-
 		@Override
 		public int compare(Edge o1, Edge o2) {
 			return o1.weight - o2.weight;
 		}
-
 	}
-
 	public static Set<Edge> primMST(Graph graph) {
 		//解锁的边进入小根堆（优先队列）
 		PriorityQueue<Edge> priorityQueue = new PriorityQueue<>(
 				new EdgeComparator());
 		HashSet<Node> set = new HashSet<>();
 		Set<Edge> result = new HashSet<>();	//依次挑选的前边在result里
+
 		for (Node node : graph.nodes.values()) {	//随便挑选一个点
 			//如果set中不包含node，则将node加入set中
 			if (!set.contains(node)) {

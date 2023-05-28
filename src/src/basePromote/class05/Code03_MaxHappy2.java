@@ -1,4 +1,4 @@
-package basePromote.class05;
+package src.basePromote.class05;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package basePromote.class02;
+package src.basePromote.class02;
 
 public class Code01_SizeBalancedTreeMap {
 

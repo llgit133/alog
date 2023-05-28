@@ -11,6 +11,16 @@ public class Code02_ReverseList {
 		}
 	}
 
+	public static class DoubleNode {
+		public int value;
+		public DoubleNode last;
+		public DoubleNode next;
+
+		public DoubleNode(int data) {
+			this.value = data;
+		}
+	}
+
 	//反转单链表
 	public static Node reverseList(Node head) {
 		Node pre = null;
@@ -28,15 +38,6 @@ public class Code02_ReverseList {
 		return pre;
 	}
 
-	public static class DoubleNode {
-		public int value;
-		public DoubleNode last;
-		public DoubleNode next;
-
-		public DoubleNode(int data) {
-			this.value = data;
-		}
-	}
 
 	//反转双链表
 	public static DoubleNode reverseList(DoubleNode head) {

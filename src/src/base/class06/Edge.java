@@ -1,4 +1,5 @@
-package base.class06;
+package src.base.class06;
+
 
 public class Edge {
 	public int weight;

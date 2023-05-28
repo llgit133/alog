@@ -1,4 +1,4 @@
-package basePromote.class01;
+package src.basePromote.class01;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,11 +9,9 @@ public class Code04_UnionFind {
 
 	public static class Element<V> {
 		public V value;
-
 		public Element(V value) {
 			this.value = value;
 		}
-
 	}
 
 	public static class UnionFindSet<V> {

@@ -1,4 +1,4 @@
-package basePromote.class07;
+package src.basePromote.class07;
 
 //机K器MP人算达法到扩指展定题位目置二方法数
 //【题目】

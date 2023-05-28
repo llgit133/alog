@@ -1,4 +1,4 @@
-package intermediate.class02;
+package src.intermediate.class02;
 
 import java.util.Arrays;
 import java.util.HashSet;

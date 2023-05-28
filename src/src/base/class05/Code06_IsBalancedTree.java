@@ -1,4 +1,4 @@
-package base.class05;
+package src.base.class05;
 
 //判断是否是平衡二叉树
 //总结平衡二叉树特点：

@@ -1,4 +1,4 @@
-package basePromote.class06;
+package src.basePromote.class06;
 
 //给定两个有符号32位整数a和b，不能使用算术运算符，分别实现a和b的加、减、乘、除运算
 //【要求】

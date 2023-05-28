@@ -3,7 +3,6 @@ package easy;
 public class InsertSort {
 
     public static void function(int[] num){
-
         if(num == null || num.length <2){
             return;
         }
@@ -16,15 +15,20 @@ public class InsertSort {
                 }
             }
         }
-    }
 
+        // 等价
+//        for (int i = 1; i < arr.length; i++) {
+//            for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--) {
+//                swapNum(arr, j, j + 1);
+//            }
+//        }
+    }
 
     public static void swapNum(int [] nums, int i, int j){
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
     }
-
 
     public static  void PrintArray(int [] arr){
         for (int i : arr) {
@@ -33,7 +37,6 @@ public class InsertSort {
         System.out.println();
 
     }
-
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package intermediate.class02;
+package src.intermediate.class02;
 
 public class Problem03_NumToStringWays {
 

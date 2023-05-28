@@ -7,16 +7,21 @@ public class Code05_BSNearLeft {
 		int L = 0;
 		int R = arr.length - 1;
 		int index = -1;
+
 		while (L < R) {
 			int mid = L + ((R - L) >> 1);
+
 			if (arr[mid] >= value) {
 				index = mid;
 				R = mid - 1;
-			} else {
-				L = mid + 1;
 			}
+			else {L = mid + 1;}
 		}
 		return index;
 	}
 
+	public static void main(String[] args) {
+		int[] ints = new int[]{1,2,3,4,5,8,9};
+		System.out.println(nearestIndex(ints, 6));
+	}
 }

@@ -1,4 +1,4 @@
-package basePromote.class03;
+package src.basePromote.class03;
 
 //KMP算法解决的问题
 //字符串str1和str2，str1是否包含str2，如果包含返回str2在str1中开始的位置。
@@ -21,13 +21,13 @@ public class Code01_KMP {
 			if (str1[i1] == str2[i2]) {
 				i1++;
 				i2++;
-				//next[i2] == -1表示已经越界
-			} else if (next[i2] == -1) {
-				i1++;
-				//i2可以继续往前跳
-			} else {
-				i2 = next[i2];
 			}
+			//next[i2] == -1表示已经越界  不能再往前跳了、让Str1换一个开头再匹配
+			// 等价于 i2 = 0
+			else if (next[i2] == -1) {i1++;}
+
+			//i2可以继续往前跳
+			else {i2 = next[i2];}
 		}
 		//i1越界或者i2越界了，返回
 		return i2 == str2.length ? i1 - i2 : -1;
@@ -41,19 +41,21 @@ public class Code01_KMP {
 		//人为规定0位置-1,1位置为0
 		next[0] = -1;
 		next[1] = 0;
+
 		int i = 2;	//next数组的位置
 		int cn = 0;
 		while (i < next.length) {
-			if (ms[i - 1] == ms[cn]) {		//i-1与cn位置比较，如果相等，next[i]改为cn+1
-				next[i++] = ++cn;
-			} else if (cn > 0) {	//当前跳到cn位置的字符，和i-1位置的字符匹配不上
-				cn = next[cn];
-			} else {
-				next[i++] = 0;
-			}
+			//i-1与cn位置比较，如果相等，next[i]改为cn+1
+			if (ms[i - 1] == ms[cn]) {next[i++] = ++cn;}
+
+			//当前跳到cn位置的字符，和i-1位置的字符匹配不上
+			else if (cn > 0) {cn = next[cn];}
+
+			else {next[i++] = 0;}
 		}
 		return next;
 	}
+
 
 	public static void main(String[] args) {
 		String str = "abbtabbzcabbtabbe";

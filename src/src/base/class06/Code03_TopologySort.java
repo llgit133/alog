@@ -1,4 +1,5 @@
-package base.class06;
+package src.base.class06;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,6 +15,7 @@ public class Code03_TopologySort {
 	public static List<Node> sortedTopology(Graph graph) {
 		HashMap<Node, Integer> inMap = new HashMap<>();
 		Queue<Node> zeroInQueue = new LinkedList<>();
+
 		//遍历graph后把入读值放入inMap
 		for (Node node : graph.nodes.values()) {
 			//放入node节点的入度
@@ -23,7 +25,6 @@ public class Code03_TopologySort {
 				zeroInQueue.add(node);
 			}
 		}
-
 		List<Node> result = new ArrayList<>();
 		//当zeroInQueue队列不为空时，令cur为队列出列节点
 		//添加cur入result
@@ -31,6 +32,7 @@ public class Code03_TopologySort {
 		while (!zeroInQueue.isEmpty()) {
 			Node cur = zeroInQueue.poll();
 			result.add(cur);
+
 			//遍历当前节点的所有后续节点
 			for (Node next : cur.nexts) {
 				//inMap放入next节点并将入度-1，最后只要没有环，所有都会入

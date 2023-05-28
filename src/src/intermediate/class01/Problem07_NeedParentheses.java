@@ -1,4 +1,4 @@
-package intermediate.class01;
+package src.intermediate.class01;
 
 //一个完整的括号字符串定义规则如下:
 //①空字符串是完整的。

@@ -1,4 +1,4 @@
-package basePromote.class05;
+package src.basePromote.class05;
 
 //Morris遍历
 //一种遍历二叉树的方式，并且时间复杂度O(N)，额外空间复杂度O(1)

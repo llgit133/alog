@@ -1,4 +1,4 @@
-package basePromote.class06;
+package src.basePromote.class06;
 
 //位运算的题目
 //给定两个有符号32位整数a和b，返回a和b中较大的。

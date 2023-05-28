@@ -1,4 +1,4 @@
-package basePromote.class08;
+package src.basePromote.class08;
 
 public class Code01_MinPathSum {
 

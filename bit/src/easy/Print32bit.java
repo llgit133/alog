@@ -12,13 +12,12 @@ public class Print32bit {
         }
         System.out.println();
     }
-
     public static void main(String[] args) {
 
 
 
-//        Print_Int(12);
-//        Print_Int(1);
+        Print_Int(12);
+        Print_Int(1);
 //        Print_Int(2);
 //        Print_Int(1 | 2);
 //        Print_Int(1 & 2);
@@ -51,8 +50,8 @@ public class Print32bit {
 
 
         // 理解 负数就是取反再加1
-        System.out.println(Integer.MIN_VALUE);
-        System.out.println(~Integer.MIN_VALUE + 1);
-        System.out.println(-Integer.MIN_VALUE);
+//        System.out.println(Integer.MIN_VALUE);
+//        System.out.println(~Integer.MIN_VALUE + 1);
+//        System.out.println(-Integer.MIN_VALUE);
     }
 }
