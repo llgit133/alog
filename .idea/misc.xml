@@ -4,6 +4,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/search/pom.xml" />
+        <option value="$PROJECT_DIR$/LeetCode/pom.xml" />
+        <option value="$PROJECT_DIR$/Offer_119/pom.xml" />
+        <option value="$PROJECT_DIR$/Offer_75/pom.xml" />
       </list>
     </option>
   </component>

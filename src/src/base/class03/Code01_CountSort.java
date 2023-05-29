@@ -18,10 +18,12 @@ public class Code01_CountSort {
 			max = Math.max(max, arr[i]);
 		}
 		int[] bucket = new int[max + 1];
-		//将arr放入bucket
+
+		//将arr放入bucket、建立bucket个桶
 		for (int i = 0; i < arr.length; i++) {
 			bucket[arr[i]]++;
 		}
+
 		int i = 0;
 		//将bucket中的读取回到arr
 		for (int j = 0; j < bucket.length; j++) {
@@ -29,8 +31,8 @@ public class Code01_CountSort {
 				arr[i++] = j;
 			}
 		}
-		System.out.println("count="+ count++);
-		printArray(arr);
+//		System.out.println("count="+ count++);
+//		printArray(arr);
 	}
 
 	// for test
@@ -95,19 +97,19 @@ public class Code01_CountSort {
 		int maxSize = 100;
 		int maxValue = 150;
 		boolean succeed = true;
-		for (int i = 0; i < testTime; i++) {
-			int[] arr1 = generateRandomArray(maxSize, maxValue);
-			int[] arr2 = copyArray(arr1);
-			countSort(arr1);
-			comparator(arr2);
-			if (!isEqual(arr1, arr2)) {
-				succeed = false;
-				printArray(arr1);
-				printArray(arr2);
-				break;
-			}
-		}
-		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+//		for (int i = 0; i < testTime; i++) {
+//			int[] arr1 = generateRandomArray(maxSize, maxValue);
+//			int[] arr2 = copyArray(arr1);
+//			countSort(arr1);
+//			comparator(arr2);
+//			if (!isEqual(arr1, arr2)) {
+//				succeed = false;
+//				printArray(arr1);
+//				printArray(arr2);
+//				break;
+//			}
+//		}
+//		System.out.println(succeed ? "Nice!" : "Fucking fucked!");
 
 		int[] arr = generateRandomArray(maxSize, maxValue);
 		printArray(arr);

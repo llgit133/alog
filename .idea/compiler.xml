@@ -7,9 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="search" />
+        <module name="Offer_75" />
+        <module name="Offer_119" />
+        <module name="LeetCode" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="LeetCode" target="1.8" />
+      <module name="Offer_119" target="1.8" />
+      <module name="Offer_75" target="1.8" />
       <module name="search" target="1.8" />
     </bytecodeTargetLevel>
   </component>

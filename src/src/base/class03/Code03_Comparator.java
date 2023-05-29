@@ -19,6 +19,7 @@ public class Code03_Comparator {
 		}
 	}
 
+	//Student id升序ASC
 	public static class IdAscendingComparator implements Comparator<Student> {
 
 		@Override
@@ -28,6 +29,7 @@ public class Code03_Comparator {
 
 	}
 
+	//Student id降序DESC
 	public static class IdDescendingComparator implements Comparator<Student> {
 
 		@Override
@@ -37,6 +39,7 @@ public class Code03_Comparator {
 
 	}
 
+	//Student age升序ASC
 	public static class AgeAscendingComparator implements Comparator<Student> {
 
 		@Override
@@ -106,6 +109,8 @@ public class Code03_Comparator {
 		System.out.println("===========================");
 		System.out.println("===========================");
 
+
+		// 优先队列实现大根堆
 		PriorityQueue<Student> maxHeapBasedAge = new PriorityQueue<>(new AgeDescendingComparator());
 		maxHeapBasedAge.add(student1);
 		maxHeapBasedAge.add(student2);
@@ -116,6 +121,7 @@ public class Code03_Comparator {
 		}
 		System.out.println("===========================");
 
+		// 优先队列实现小根堆
 		PriorityQueue<Student> minHeapBasedId = new PriorityQueue<>(new IdAscendingComparator());
 		minHeapBasedId.add(student1);
 		minHeapBasedId.add(student2);
@@ -128,6 +134,7 @@ public class Code03_Comparator {
 		System.out.println("===========================");
 		System.out.println("===========================");
 
+		// 有序表TreeSet、对象需要指定比较器
 		TreeSet<Student> treeAgeDescending = new TreeSet<>(new AgeDescendingComparator());
 		treeAgeDescending.add(student1);
 		treeAgeDescending.add(student2);
